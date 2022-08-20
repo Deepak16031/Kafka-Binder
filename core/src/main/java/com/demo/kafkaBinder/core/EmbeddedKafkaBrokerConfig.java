@@ -1,13 +1,7 @@
 package com.demo.kafkaBinder.core;
 
-/*
- * Copyright (c) 2021 BankBazaar.com, Chennai, TN, India. All rights reserved. This software is the
- * confidential and proprietary information of BankBazaar.com ("Confidential Information"). You
- * shall not disclose such Confidential Information and shall use it only in accordance with the
- * terms of the license agreement you entered into with BankBazaar.
- */
-
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import javax.annotation.PreDestroy;
@@ -47,7 +41,7 @@ public class EmbeddedKafkaBrokerConfig {
     brokerProperties.put(PORT, KAFKA_PORT.toString());
     brokerProperties.put(LOG_DIRS, TMP_EMBEDDED_KAFKA_LOGS);
     this.embeddedKafkaBroker =
-        new EmbeddedKafkaBroker(1, true, 2)
+        new EmbeddedKafkaBroker(1, true, 2,"demoTopic")
             .kafkaPorts(KAFKA_PORT)
             .zkPort(ZOOKEEPER_PORT)
             .brokerProperties(brokerProperties);

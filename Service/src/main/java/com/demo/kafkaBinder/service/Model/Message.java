@@ -12,4 +12,12 @@ import lombok.NoArgsConstructor;
 public class Message {
   private String name;
   private String phone;
+
+  @Override
+  public String toString() {
+    return "Message{" +
+             name + '\'' +
+            phone + '\'' +
+            '}';
+  }
 }

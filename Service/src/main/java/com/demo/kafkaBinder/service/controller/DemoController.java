@@ -19,5 +19,10 @@ public class DemoController {
     demoSupplier.supply();
     return "Hello World!";
   }
+  @GetMapping("object")
+  public String objectController(){
+    demoSupplier.supplyMessages();
+    return "Hello Objects!";
+  }
 
 }
